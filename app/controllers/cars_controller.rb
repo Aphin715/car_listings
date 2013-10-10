@@ -17,7 +17,7 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
 
     if @car.save
-         redirect_to car_path(@car), notice: 'Car recorded.'
+         redirect_to new_car_path, notice: 'Car recorded.'
     else
       render :new
     end
@@ -30,6 +30,6 @@ protected
   end
 
   def car_params
-    params.require(:car).permit(:color, :mileage, :year, :description)
+    params.require(:car).permit(:color, :mileage, :year, :description, :manufacturer_id)
   end
 end

@@ -26,7 +26,7 @@ So that I can list it in my lot
   fill_in 'Year', with: '1986'
   fill_in 'Description', with: 'Large car with great features.'
   click_button 'Record'
-
+  expect(page).to have_content("Car recorded.")
   expect(Car.count).to eql(prev_count + 1)
 
  end

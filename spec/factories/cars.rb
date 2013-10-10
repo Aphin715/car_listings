@@ -6,5 +6,6 @@ FactoryGirl.define do
     year 1
     mileage 1
     description "MyText"
+    manufacturer "Ford"
   end
 end
