@@ -16,6 +16,10 @@
   <strong>Description:</strong>
   <%= @car.description %>
 </p>
-
-
+<% if @car.manufacturer.present? %>
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @car.manufacturer.name %>
+</p>
+<% end %>
 
